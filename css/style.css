@@ -1,0 +1,157 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grid_wrapper{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 400px 400px 400px 400px 80px;
+    grid-template-areas: 
+    "he na"
+    "s1 s1"
+    "s2 s2"
+    "s3 s3"
+    "s4 s4"
+    "fo fo";
+}
+
+header{
+    grid-area: he;
+    background-color: rgb(240, 143, 159);
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(240, 143, 159);
+    align-items: center;
+    grid-area: na;
+}
+
+#länk_lista a{
+    text-decoration: none;
+    letter-spacing: 0.1875rem;
+    color: aliceblue;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+#länk_lista{
+    background-color: rgb(240, 143, 159);
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: -400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    transition: 0.5s;
+}
+
+.länk_lista_synlig{
+    transform: translateY(500px);
+}
+
+#burgare{
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+#burgare div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 20%;
+    transition: 0.5s;
+}
+
+.burgare_i_x_form #mitten_linje{
+    opacity: 0;
+}
+
+.burgare_i_x_form #top_linje{
+    transform: rotate(-45deg) translate(-5px, 6px);    
+}
+
+.burgare_i_x_form #botten_linje{
+    transform: rotate(45deg) translate(-5px, -6px);
+    
+}
+
+footer{
+    grid-area: fo;
+    background-color: lightcoral;
+}
+
+/* ---------------------------------------STARTSIDAN------------------------------------------------------------ */
+
+#section_1{
+    grid-area: s1;
+    display: flex;
+    background-image: url("../img/Prästgårds_huset.jpg");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: space-around;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+#section_2{
+    grid-area: s2;
+    background-color: lightgreen;
+}
+
+#section_3{
+    grid-area: s3;
+    background-color: lightpink;
+}
+
+#section_4{
+    grid-area: s4;
+    background-color: lightsalmon;
+}
+
+
+
+/* -------------------------------------dator----------------------------------------- */
+
+@media screen and (min-width: 700px) {
+    
+    #burgare{display: none;}
+
+
+    #grid_wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 550px 400px 80px;
+    grid-template-areas: 
+    "na na na"
+    "s1 s1 s1"
+    "s2 s3 s4"
+    "fo fo fo";
+    }   
+
+    header{display: none;}
+
+    #section_1{font-size: 60px;}
+
+    #länk_lista{
+    background-color: rgb(240, 143, 159);
+    height: 100px;
+    width: 100%;
+    top: 0px;
+    flex-direction: row;
+    }
+
+    .länk_lista_synlig{
+    transform: translateY(0px);
+    }
+
+}
