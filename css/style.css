@@ -4,22 +4,11 @@
     box-sizing: border-box;
 }
 
-#grid_wrapper{
-    display: grid;
-    grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 400px 400px 400px 400px 80px;
-    grid-template-areas: 
-    "he na"
-    "s1 s1"
-    "s2 s2"
-    "s3 s3"
-    "s4 s4"
-    "fo fo";
-}
-
 header{
     grid-area: he;
     background-color: rgb(240, 143, 159);
+    position: sticky;
+    top: 0px;
 }
 
 nav{
@@ -28,6 +17,8 @@ nav{
     background-color: rgb(240, 143, 159);
     align-items: center;
     grid-area: na;
+    position: sticky;
+    top: 0px;
 }
 
 #länk_lista a{
@@ -92,10 +83,24 @@ footer{
 
 /* ---------------------------------------STARTSIDAN------------------------------------------------------------ */
 
+#grid_wrapper_index{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 400px 400px 400px 400px 80px;
+    grid-template-areas: 
+    "he na"
+    "s1 s1"
+    "s2 s2"
+    "s3 s3"
+    "s4 s4"
+    "fo fo";
+    position: relative;
+}
+
 #section_1{
     grid-area: s1;
     display: flex;
-    background-image: url("../img/Prästgårds_huset.jpg");
+    background-image: url("../img/prastgards_huset.jpg");
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -119,6 +124,28 @@ footer{
     background-color: lightsalmon;
 }
 
+/* ---------------------------------------Kalender------------------------------------------- */
+
+#grid_wrapper_kalender{
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 800px 80px;
+    grid-template-areas: 
+    "he na"
+    "di di"
+    "fo fo";
+    position: relative;
+}
+
+#alla_handelser{
+    display: flex;
+    flex-direction: column;
+    grid-area: di;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
 
 
 /* -------------------------------------dator----------------------------------------- */
@@ -126,18 +153,6 @@ footer{
 @media screen and (min-width: 700px) {
     
     #burgare{display: none;}
-
-
-    #grid_wrapper{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 550px 400px 80px;
-    grid-template-areas: 
-    "na na na"
-    "s1 s1 s1"
-    "s2 s3 s4"
-    "fo fo fo";
-    }   
-
     header{display: none;}
 
     #section_1{font-size: 60px;}
@@ -153,5 +168,31 @@ footer{
     .länk_lista_synlig{
     transform: translateY(0px);
     }
+
+    /* -----------------------------------------------STARTSIDA--------------------------------- */
+
+    #grid_wrapper_index{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 550px 400px 80px;
+    grid-template-areas: 
+    "na na na"
+    "s1 s1 s1"
+    "s2 s3 s4"
+    "fo fo fo";
+    }   
+
+    #section_1{font-size: 60px;}
+
+    /* ------------------------------------------------KALENDER------------------------------------ */
+
+    #grid_wrapper_kalender{
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 800px 80px;
+    grid-template-areas: 
+    "na"
+    "di"
+    "fo";
+        }   
+    
 
 }
