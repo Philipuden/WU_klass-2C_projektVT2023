@@ -72,8 +72,7 @@ nav{
 }
 
 .burgare_i_x_form #botten_linje{
-    transform: rotate(45deg) translate(-5px, -6px);
-    
+    transform: rotate(45deg) translate(-5px, -6px);  
 }
 
 footer{
@@ -129,7 +128,7 @@ footer{
 #grid_wrapper_kalender{
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 800px 80px;
+    grid-template-rows: 100px 1000px 80px;
     grid-template-areas: 
     "he na"
     "di di"
@@ -141,10 +140,123 @@ footer{
     display: flex;
     flex-direction: column;
     grid-area: di;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: url("../img/prastgards_huset.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.frame{
+    border: outset pink 7px;
+    height: 150px;
+    width: 100%;
     padding: 20px;
 }
 
+#article_k1{
+    background-image: url("../img/rom.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#article_k2{
+    background-image: url("../img/rom.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#article_k3{
+    background-image: url("../img/rom.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#article_k4{
+    background-image: url("../img/rom.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#article_k5{
+    background-image: url("../img/rom.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.kalender_article{
+    color: aliceblue;
+}
+
+/* --------------------------------------basta assistenten------------------------------ */
+
+#grid_wrapper_basta_assistenten{
+    display: grid;
+    grid-template-rows: 100px 1000px 80px;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-areas: 
+    "he na"
+    "bb bb"
+    "fo fo";
+}
+
+#bakgrund_basta{
+    display: grid;
+    grid-template-rows: 60px 500px 500px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "sb"
+    "ig"
+    "ab";
+    grid-area: bb;
+    background-image: url("../img/prastgards_huset.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#image_basta_kontainer{
+    grid-area: ig;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#rubrik_basta{
+    grid-area: sb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 45px;
+    padding-top: 5px;
+}
+
+#namn_rubrik{
+    color: aliceblue;
+    font-size: 40px;
+}
+
+#bilden_pa_basta{
+    height: 400px;
+    width: auto;
+}
+
+#varfor_basta{
+    grid-area: ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tal{
+    padding: 10px;
+    height: 410px;
+    width: 550px;
+    background: pink;
+    color: aliceblue;
+    border-radius: 10px;
+}
 
 
 
@@ -186,13 +298,62 @@ footer{
     /* ------------------------------------------------KALENDER------------------------------------ */
 
     #grid_wrapper_kalender{
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 800px 80px;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 700px 80px;
     grid-template-areas: 
     "na"
     "di"
     "fo";
         }   
+
+    #alla_handelser{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .frame{
+        width: 550px;
+    }
+
+    .kalender_article{
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .kalender_article:hover{
+        opacity: 100%;
+    }
     
+    /* -----------------------------------------------------BASTA ASSISTENTEN------------------------------ */
+
+    #grid_wrapper_basta_assistenten{
+        grid-template-rows: 100px 660px 80px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "na"
+        "bb"
+        "fo";
+    }
+
+    #bakgrund_basta{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 60px 600px;
+        grid-template-areas: 
+        "sb sb"
+        "ig ab";
+    }
+    
+    #bilden_pa_basta{
+        height: 450px;
+        width: auto;
+    }
+
+    #tal{
+        height: 440px;
+        width: 550px;
+    }
 
 }
