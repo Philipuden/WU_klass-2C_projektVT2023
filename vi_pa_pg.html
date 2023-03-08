@@ -4,30 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vi på Prästgården</title>
+    <title>Kalender</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <Header>Huve</Header>
+    <div id="grid_wrapper_vi_pa_pg">
+        <Header>Huve</Header>
 
-    <nav>
-        <ul id="länk_lista">
-            <li><a href="index.html">Startsida</a></li>
-            <li><a href="kalender.html">Kalender</a></li>
-            <li><a href="vi_pa_pg.html">Vi på Prästgården</a></li>
-            <li><a href="basta_assistenten.html">BÄSTA ASSISTENTEN</a></li>
-        </ul>
-        <div id="burgare">
-            <div id="top_linje"></div>
-            <div id="mitten_linje"></div>
-            <div id="botten_linje"></div>
+        <nav>
+            <ul id="länk_lista">
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="kalender.html">Kalender</a></li>
+                <li><a href="vi_pa_pg.html">Vi på Prästgården</a></li>
+                <li><a href="basta_assistenten.html">BÄSTA ASSISTENTEN</a></li>
+            </ul>
+            <div id="burgare">
+                <div id="top_linje"></div>
+                <div id="mitten_linje"></div>
+                <div id="botten_linje"></div>
+            </div>
+
+        </nav>
+
+    
+
+        <div id="bakgrund_vi_pa_pg">
+            <div class="person_kontainer">
+                <div class="bild_mitten"><img class = "bild_i_kontainer" src="img/jag.jpg" alt="Sofie Dagerås"></div>
+                <div class="text_vi_pa_pg">
+                    <h3 class="namn_personal">Sofie Dagerås</h3>
+                    <h4 class="arbetsplats">Landvetter Härryda pastorat</h4>
+                    <p class="yrke">Fritidsledare</p>
+                    <h4 class="mobil_nummer">Mobil: <a href="">070 - 000 00 00</a></h4>
+                    <h4 class="epost">E-mail: <a href="">Mickis.Lökholm@gmail.com</a></h4>
+                </div>
+
+            </div>
+
+            <div class="person_kontainer">
+                <div class="bild_mitten"><img class = "bild_i_kontainer" src="img/jag.jpg" alt="Mickis Lökholm"></div>
+                <div class="text_vi_pa_pg">
+                    <h3 class="namn_personal">Mickis Lökholm</h3>
+                    <h4 class="arbetsplats">Landvetter Härryda pastorat</h4>
+                    <p class="yrke">Fritidsledare</p>
+                    <h4 class="mobil_nummer">Mobil: <a href="">070 - 000 00 01</a></h4>
+                    <h4 class="epost">E-mail: <a href="">Mickis.Lökholm@gmail.com</a></h4>
+                </div>
+
+            </div>
         </div>
 
-    </nav>
-
-    <footer>fot</footer>
-
+        <footer>fot</footer>
+    </div>
 
     <script src="js/burgar_kod.js"></script>
 </body>

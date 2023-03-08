@@ -188,6 +188,58 @@ footer{
     color: aliceblue;
 }
 
+/* ----------------------------------------vi pa pg-------------------------------------- */
+
+#grid_wrapper_vi_pa_pg{
+    display: grid;
+    grid-template-rows: 100px 800px 80px;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-areas: 
+    "he na"
+    "bv bv"
+    "fo fo";
+}
+
+#bakgrund_vi_pa_pg{
+    grid-area: bv;
+    background-image: url("../img/prastgards_huset.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.person_kontainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "iv tv";
+    background: grey;
+    height: 250px;
+    width: 450px;
+}
+
+.bild_mitten{
+    display: flex;
+    grid-area: iv;
+    justify-content: center;
+    align-items: center;
+}
+
+.bild_i_kontainer{
+    height: 200px;
+    width: auto;
+}
+
+.text_vi_pa_pg{
+    grid-area: tv;
+}
+
+
 /* --------------------------------------basta assistenten------------------------------ */
 
 #grid_wrapper_basta_assistenten{
@@ -326,6 +378,19 @@ footer{
     .kalender_article:hover{
         opacity: 100%;
     }
+
+    
+/* ----------------------------------------vi pa pg-------------------------------------- */
+
+#grid_wrapper_vi_pa_pg{
+    display: grid;
+    grid-template-rows: 100px 600px 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "na"
+    "bv"
+    "fo";
+}
     
     /* -----------------------------------------------------BASTA ASSISTENTEN------------------------------ */
 
