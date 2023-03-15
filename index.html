@@ -28,15 +28,35 @@
         </nav>
 
         <section id="section_1"><h1>PRÄSTGÅRDEN</h1></section>
-        <section id="section_2">
+        <section class="box_index" id="section_2">
             <h2>Öppettider Assistenter</h2>
+            <ul>
+                <li>Måndag:</li>
+                <li>Tisdag:</li>
+                <li>Onsdag:</li>
+                <li>Torsdag:</li>
+                <li>Fredag:</li>
+                <li>Lördag:</li>
+                <li>Söndag</li>
+            </ul>
 
+            <p>Om inte annat sägs i <a href="kalender.html">Kalendern</a></p>
         </section>
-        <section id="section_3">
+        <section class="box_index" id="section_3">
             <h2>Öppettider konfirmander</h2>
+            <ul>
+                <li>Måndag:</li>
+                <li>Tisdag:</li>
+                <li>Onsdag:</li>
+                <li>Torsdag:</li>
+                <li>Fredag:</li>
+                <li>Lördag:</li>
+                <li>Söndag</li>
+            </ul>
 
+            <p>Om inte annat sägs i <a href="kalender.html">Kalendern</a></p>
         </section>
-        <section id="section_4">
+        <section class="box_index" id="section_4">
             <h2>BLI ASSISTENT</h3>
             <h3>Kostar inget och är ej bindande</h3>
             <p><strong>Förnamn Efternamn</strong></p>
@@ -48,9 +68,19 @@
             <input type="button" value="Skicka in">
         </section>
 
-        <footer>fot</footer>
+        <footer>
+            <div id="hogersida">
+                <h3>Här finns vi!</h3>
+                <div id="map"></div>
+            </div>
+            <div id="vanstersida">
+                <h3>kolla gärna in oss här med!</h3>
+                <p class="footer_lank"><a href="https://www.instagram.com/prastgarden/">Instagram <img class="logo" src="img/insta_logo.png" alt="Instagram"></a></p>
+            </div>
+        </footer>
     </div>  
 
-    <script src="js/burgar_kod.js"></script>
+    <script src="js/app.js"></script>
+    <script aync defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
 </body>
 </html>

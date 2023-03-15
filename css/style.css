@@ -77,15 +77,48 @@ nav{
 
 footer{
     grid-area: fo;
-    background-color: lightcoral;
+    background-image: url("../img/footer_bakgrund.png");
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "vs hs";
+    border-top: 10px ridge aliceblue;
+    color:aliceblue;
 }
+
+#hogersida{
+    grid-area: hs;
+    padding: 15px;
+}
+#vanstersida{
+    display: flex;
+    flex-direction: column;
+    grid-area: vs;
+    padding: 15px;
+    align-items: end;
+}
+
+.logo{
+    height: 50px;
+    width: auto;
+}
+
+.footer_lank{
+    display: flex;
+    background: tan;
+}
+
+#map {
+    height: 300px; 
+    width: 300px; 
+  }
 
 /* ---------------------------------------STARTSIDAN------------------------------------------------------------ */
 
 #grid_wrapper_index{
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 400px 400px 400px 400px 80px;
+    grid-template-rows: 100px 400px 400px 400px 400px 400px;
     grid-template-areas: 
     "he na"
     "s1 s1"
@@ -110,7 +143,7 @@ footer{
 
 #section_2{
     grid-area: s2;
-    background-color: lightgreen;
+    background-color: rgb(254, 165, 179);
 }
 
 #section_3{
@@ -120,7 +153,17 @@ footer{
 
 #section_4{
     grid-area: s4;
-    background-color: lightsalmon;
+    background-color: rgb(248, 192, 200);
+}
+
+.box_index{
+    padding: 20px;
+    color: aliceblue;
+    border: 7px outset aliceblue;
+}
+
+.box_index a{
+    color: aliceblue;
 }
 
 /* ---------------------------------------Kalender------------------------------------------- */
@@ -128,7 +171,7 @@ footer{
 #grid_wrapper_kalender{
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 1000px 80px;
+    grid-template-rows: 100px 1000px 400px;
     grid-template-areas: 
     "he na"
     "di di"
@@ -161,25 +204,25 @@ footer{
 }
 
 #article_k2{
-    background-image: url("../img/rom.jpg");
+    background-image: url("../img/krakow.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #article_k3{
-    background-image: url("../img/rom.jpg");
+    background-image: url("../img/ieper.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #article_k4{
-    background-image: url("../img/rom.jpg");
+    background-image: url("../img/konfa.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #article_k5{
-    background-image: url("../img/rom.jpg");
+    background-image: url("../img/eroom.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -192,7 +235,7 @@ footer{
 
 #grid_wrapper_vi_pa_pg{
     display: grid;
-    grid-template-rows: 100px 800px 80px;
+    grid-template-rows: 100px 800px 400px;
     grid-template-columns: minmax(200px, 1fr) 200px;
     grid-template-areas: 
     "he na"
@@ -218,9 +261,10 @@ footer{
     grid-template-rows: 1fr;
     grid-template-areas: 
     "iv tv";
-    background: grey;
+    background: lightpink;
     height: 250px;
     width: 450px;
+    border: 5px aliceblue outset;
 }
 
 .bild_mitten{
@@ -232,19 +276,43 @@ footer{
 
 .bild_i_kontainer{
     height: 200px;
-    width: auto;
+    width: 170px;
+    border: 5px double aliceblue;
 }
 
 .text_vi_pa_pg{
     grid-area: tv;
+    padding-top: 20px;
+    color: aliceblue;
+
 }
 
+.text_vi_pa_pg a{
+    color: aliceblue;
+}
 
+.namn_personal{
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+.arbetsplats{
+    font-size: 17px;
+}
+
+.yrke{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.kontakt_info{
+    font-size: 18px;
+}
 /* --------------------------------------basta assistenten------------------------------ */
 
 #grid_wrapper_basta_assistenten{
     display: grid;
-    grid-template-rows: 100px 1000px 80px;
+    grid-template-rows: 100px 1000px 400px;
     grid-template-columns: minmax(200px, 1fr) 200px;
     grid-template-areas: 
     "he na"
@@ -337,7 +405,7 @@ footer{
 
     #grid_wrapper_index{
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 550px 400px 80px;
+    grid-template-rows: 100px 550px 400px 400px;
     grid-template-areas: 
     "na na na"
     "s1 s1 s1"
@@ -351,7 +419,7 @@ footer{
 
     #grid_wrapper_kalender{
     grid-template-columns: 100%;
-    grid-template-rows: 100px 700px 80px;
+    grid-template-rows: 100px 700px 400px;
     grid-template-areas: 
     "na"
     "di"
@@ -368,7 +436,7 @@ footer{
     .frame{
         width: 550px;
     }
-
+    
     .kalender_article{
         opacity: 0;
         height: 100%;
@@ -377,6 +445,8 @@ footer{
 
     .kalender_article:hover{
         opacity: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 5px;
     }
 
     
@@ -384,18 +454,22 @@ footer{
 
 #grid_wrapper_vi_pa_pg{
     display: grid;
-    grid-template-rows: 100px 600px 80px;
+    grid-template-rows: 100px 600px 400px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "na"
     "bv"
     "fo";
 }
+
+.person_kontainer{
+    width: 800px;
+}
     
     /* -----------------------------------------------------BASTA ASSISTENTEN------------------------------ */
 
     #grid_wrapper_basta_assistenten{
-        grid-template-rows: 100px 660px 80px;
+        grid-template-rows: 100px 660px 400px;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "na"
