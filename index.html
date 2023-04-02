@@ -31,13 +31,13 @@
         <section class="box_index" id="section_2">
             <h2>Öppettider Assistenter</h2>
             <ul>
-                <li>Måndag:</li>
-                <li>Tisdag:</li>
-                <li>Onsdag:</li>
-                <li>Torsdag:</li>
-                <li>Fredag:</li>
-                <li>Lördag:</li>
-                <li>Söndag</li>
+                <li>Måndag: Stängt</li>
+                <li>Tisdag: 18:30-20:00</li>
+                <li>Onsdag: Stängt</li>
+                <li>Torsdag: 14.00-21:30</li>
+                <li>Fredag: Stängt</li>
+                <li>Lördag: Stängt</li>
+                <li>Söndag: 11:00-12:00</li>
             </ul>
 
             <p>Om inte annat sägs i <a href="kalender.html">Kalendern</a></p>
@@ -45,13 +45,13 @@
         <section class="box_index" id="section_3">
             <h2>Öppettider konfirmander</h2>
             <ul>
-                <li>Måndag:</li>
-                <li>Tisdag:</li>
-                <li>Onsdag:</li>
-                <li>Torsdag:</li>
-                <li>Fredag:</li>
-                <li>Lördag:</li>
-                <li>Söndag</li>
+                <li>Måndag: Stängt</li>
+                <li>Tisdag: 14:00 - 20:00</li>
+                <li>Onsdag: Stängt</li>
+                <li>Torsdag: Stängt</li>
+                <li>Fredag: Stängt</li>
+                <li>Lördag: Stängt</li>
+                <li>Söndag 11:00-12:00</li>
             </ul>
 
             <p>Om inte annat sägs i <a href="kalender.html">Kalendern</a></p>
@@ -60,13 +60,20 @@
             <h2>BLI ASSISTENT</h3>
             <h3>Kostar inget och är ej bindande</h3>
             <p><strong>Förnamn Efternamn</strong></p>
-            <input type="text">
+            <input type="text" id="text_ruta1">
             <p><strong>Personnummer (ÅÅMMDD-XXXX)</strong></p>
-            <input type="text">
+            <input type="text" id="text_ruta2">
             <p><strong>Telefonnummer</strong></p>
-            <input type="text">
-            <input type="button" value="Skicka in">
+            <input type="text" id="text_ruta3">
+            <button type="button" onclick="TomRuta()">Skicka in</button>
+            <div class="popup">
+                <span class="popuptext" id="myPopup">Tack för anmälan!</span>
+            </div>
         </section>
+
+        <div class="popup">
+            <span class="popuptext" id="myPopup">Tack för anmälan!</span>
+        </div>
 
         <footer>
             <div id="hogersida">
@@ -76,6 +83,7 @@
             <div id="vanstersida">
                 <h3>kolla gärna in oss här med!</h3>
                 <p class="footer_lank"><a href="https://www.instagram.com/prastgarden/">Instagram <img class="logo" src="img/insta_logo.png" alt="Instagram"></a></p>
+                <p class="footer_lank"><a href="https://www.svenskakyrkan.se/landvetterharryda">svenskakyrkan</a></p>
             </div>
         </footer>
     </div>  

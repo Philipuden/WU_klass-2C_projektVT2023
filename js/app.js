@@ -29,3 +29,19 @@ function initMap() {
   }
   
   window.initMap = initMap; 
+
+  // -----------------------------------------
+
+  async function TomRuta() {
+    document.getElementById("text_ruta1").value = "";
+    document.getElementById("text_ruta2").value = "";
+    document.getElementById("text_ruta3").value = "";
+
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+    
+    await delay(500);
+    popup.classList.remove("show") 
+    popup.classList.toggle("hidden")
+    
+}
