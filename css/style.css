@@ -2,13 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header{
     grid-area: he;
+    display: flex;
     background-color: rgb(240, 143, 159);
     position: sticky;
     top: 0px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+#header_logo{
+    border-radius: 55px;
+    height: 80px;
+    width: auto;
 }
 
 nav{
@@ -40,6 +50,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    text-align: center;
     align-items: center;
     list-style: none;
     transition: 0.5s;
@@ -84,28 +95,52 @@ footer{
     grid-template-areas: "vs hs";
     border-top: 10px ridge aliceblue;
     color:aliceblue;
+
 }
 
 #hogersida{
     grid-area: hs;
     padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 180px;
+    border-radius: 15px;
+    margin: 20px 0px 0px 10px;
 }
+
 #vanstersida{
     display: flex;
     flex-direction: column;
     grid-area: vs;
     padding: 15px;
-    align-items: end;
+    margin-left: auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    width: 330px;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
-.logo{
-    height: 50px;
-    width: auto;
+.titel_lank{
+    font-size: 25px;
 }
 
 .footer_lank{
     display: flex;
-    background: tan;
+    margin-top: 30px;
+}
+
+.footer_lank a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px
+}
+
+.footer_lank a:active {
+    text-decoration: underline;
+}
+
+.footer_lank a:hover{
+    text-decoration: underline;
 }
 
 #map {
@@ -143,23 +178,29 @@ footer{
 
 #section_2{
     grid-area: s2;
-    background-color: rgb(254, 165, 179);
+    background-color: rgb(250, 152, 166);
 }
 
 #section_3{
     grid-area: s3;
-    background-color: lightpink;
+    background-color: rgb(250, 163, 176);
 }
 
 #section_4{
     grid-area: s4;
-    background-color: rgb(248, 192, 200);
+    background-color: rgb(247, 174, 185);
 }
 
 .box_index{
     padding: 20px;
     color: aliceblue;
     border: 7px outset aliceblue;
+}
+
+.tider{
+    list-style: none;
+    margin: 10px;
+    font-size: 18px;
 }
 
 .box_index a{
@@ -202,22 +243,30 @@ footer{
     from {opacity: 0;}
     to {opacity:1 ;}
   }
-
-  .popup .hidden{
-    opacity: 0;
-  }
-
 /* ---------------------------------------Kalender------------------------------------------- */
 
 #grid_wrapper_kalender{
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 1000px 400px;
+    grid-template-rows: 100px 100px 1000px 400px;
     grid-template-areas: 
     "he na"
+    "kt kt"
     "di di"
     "fo fo";
     position: relative;
+}
+
+#kalender_titel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: kt;
+    text-transform: uppercase;
+    font-size: 80px;
+    color: aliceblue;
+    background: pink;
+    border: aliceblue 7px double;
 }
 
 #alla_handelser{
@@ -235,7 +284,6 @@ footer{
     border: outset pink 7px;
     height: 150px;
     width: 100%;
-    padding: 20px;
 }
 
 #article_k1{
@@ -268,11 +316,16 @@ footer{
     background-position: center;
 }
 
+.rgba{
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
 .kalender_article{
     color: aliceblue;
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
+    margin: 15px;
 }
 
 /* ----------------------------------------vi pa pg-------------------------------------- */
@@ -307,7 +360,7 @@ footer{
     "iv tv";
     background: lightpink;
     height: 250px;
-    width: 450px;
+    width: 550px;
     border: 5px aliceblue outset;
 }
 
@@ -356,7 +409,7 @@ footer{
 
 #grid_wrapper_basta_assistenten{
     display: grid;
-    grid-template-rows: 100px 1000px 400px;
+    grid-template-rows: 100px 1300px 400px;
     grid-template-columns: minmax(200px, 1fr) 200px;
     grid-template-areas: 
     "he na"
@@ -366,7 +419,7 @@ footer{
 
 #bakgrund_basta{
     display: grid;
-    grid-template-rows: 60px 500px 500px;
+    grid-template-rows: 200px 500px 600px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "sb"
@@ -389,21 +442,32 @@ footer{
 #rubrik_basta{
     grid-area: sb;
     display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    align-self: center;
+    justify-self: center;
     color: aliceblue;
     font-size: 45px;
     padding-top: 5px;
+    background: pink;
+    border-radius: 10px;
+    width: 500px;
+    border: aliceblue 7px ridge;
 }
 
 #namn_rubrik{
     color: aliceblue;
     font-size: 40px;
+    background: pink;
+    border-radius: 5px;
+    border: aliceblue 5px ridge;
 }
 
 #bilden_pa_basta{
     height: 400px;
     width: auto;
+    border: aliceblue 7px ridge;
+    border-radius: 20px;
 }
 
 #varfor_basta{
@@ -415,9 +479,10 @@ footer{
 
 #tal{
     padding: 10px;
-    height: 410px;
+    height: 490px;
     width: 550px;
     background: pink;
+    border: aliceblue 7px ridge;
     color: aliceblue;
     border-radius: 10px;
 }
@@ -441,9 +506,13 @@ footer{
     flex-direction: row;
     }
 
+    #länk_lista a{font-size: 25px;}
+
     .länk_lista_synlig{
     transform: translateY(0px);
     }
+
+    #hogersida{width: 330px;}
 
     /* -----------------------------------------------STARTSIDA--------------------------------- */
 
@@ -463,9 +532,10 @@ footer{
 
     #grid_wrapper_kalender{
     grid-template-columns: 100%;
-    grid-template-rows: 100px 700px 400px;
+    grid-template-rows: 100px 100px 650px 400px;
     grid-template-areas: 
     "na"
+    "kt"
     "di"
     "fo";
         }   
@@ -487,11 +557,9 @@ footer{
         width: 100%;
     }
 
-    .kalender_article:hover{
-        opacity: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        border-radius: 5px;
-    }
+    .kalender_article:hover{opacity: 1;}
+
+
 
     
 /* ----------------------------------------vi pa pg-------------------------------------- */
@@ -513,7 +581,7 @@ footer{
     /* -----------------------------------------------------BASTA ASSISTENTEN------------------------------ */
 
     #grid_wrapper_basta_assistenten{
-        grid-template-rows: 100px 660px 400px;
+        grid-template-rows: 100px 800px 400px;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "na"
@@ -523,7 +591,7 @@ footer{
 
     #bakgrund_basta{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 60px 600px;
+        grid-template-rows: 200px 600px;
         grid-template-areas: 
         "sb sb"
         "ig ab";
@@ -535,7 +603,7 @@ footer{
     }
 
     #tal{
-        height: 440px;
+        height: 500px;
         width: 550px;
     }
 

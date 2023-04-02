@@ -38,10 +38,5 @@ function initMap() {
     document.getElementById("text_ruta3").value = "";
 
     var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-    
-    await delay(500);
-    popup.classList.remove("show") 
-    popup.classList.toggle("hidden")
-    
+    popup.classList.toggle("show");    
 }
