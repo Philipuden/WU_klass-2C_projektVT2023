@@ -248,10 +248,11 @@ footer{
 #grid_wrapper_kalender{
     display: grid;
     grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 100px 100px 1000px 400px;
+    grid-template-rows: 100px 100px 600px 800px 400px;
     grid-template-areas: 
     "he na"
     "kt kt"
+    "tr tr"
     "di di"
     "fo fo";
     position: relative;
@@ -269,6 +270,25 @@ footer{
     border: aliceblue 7px double;
 }
 
+#text-ruta{
+    grid-area: tr;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-container{
+    background-color: aliceblue;
+    height: 400px;
+    width: 600px;
+    border-radius: 15px;
+}
+
+.osynlig{
+    display: none;
+}
+
 #alla_handelser{
     display: flex;
     flex-direction: column;
@@ -282,7 +302,7 @@ footer{
 
 .frame{
     border: outset pink 7px;
-    height: 150px;
+    height: 130px;
     width: 100%;
 }
 
@@ -316,17 +336,6 @@ footer{
     background-position: center;
 }
 
-.rgba{
-    display: flex;
-    background: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    width: 100%;
-}
-
-.kalender_article{
-    color: aliceblue;
-    margin: 15px;
-}
 
 /* ----------------------------------------vi pa pg-------------------------------------- */
 
@@ -531,35 +540,19 @@ footer{
     /* ------------------------------------------------KALENDER------------------------------------ */
 
     #grid_wrapper_kalender{
-    grid-template-columns: 100%;
-    grid-template-rows: 100px 100px 650px 400px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 100px 700px 400px;
     grid-template-areas: 
-    "na"
-    "kt"
-    "di"
-    "fo";
-        }   
+    "na na"
+    "kt kt"
+    "di tr"
+    "fo fo";
+    }   
 
-    #alla_handelser{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    #text-kontainer{
+        width: 500px;
+        height: 600px;
     }
-
-    .frame{
-        width: 550px;
-    }
-    
-    .kalender_article{
-        opacity: 0;
-        height: 100%;
-        width: 100%;
-    }
-
-    .kalender_article:hover{opacity: 1;}
-
-
 
     
 /* ----------------------------------------vi pa pg-------------------------------------- */

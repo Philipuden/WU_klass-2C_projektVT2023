@@ -11,32 +11,69 @@ function toggleMeny() {
 
 borgir.addEventListener('click', toggleMeny)
 
-//----------------------------------------
-
-function initMap() {
-  
-    const prastgarden = { lat: 57.68072913961839, lng: 12.20877225925624 };
-    
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 14,
-      center: prastgarden,
-    });
-    
-    const marker = new google.maps.Marker({
-      position: prastgarden,
-      map: map,
-    });
-  }
-  
-  window.initMap = initMap; 
 
   // -----------------------------------------
 
-  async function TomRuta() {
-    document.getElementById("text_ruta1").value = "";
-    document.getElementById("text_ruta2").value = "";
-    document.getElementById("text_ruta3").value = "";
+const button = document.getElementById('knapp_index')
 
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");    
+async function tomRuta() {
+  document.getElementById("text_ruta1").value = "";
+  document.getElementById("text_ruta2").value = "";
+  document.getElementById("text_ruta3").value = "";
+
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");    
 }
+
+button.addEventListener('click', tomRuta)
+
+// -------------------------------------
+
+
+const article1 = document.getElementById('article_k1');
+const article2 = document.getElementById('article_k2');
+const article3 = document.getElementById('article_k3');
+const article4 = document.getElementById('article_k4');
+const article5 = document.getElementById('article_k5');
+
+const textRuta1 = document.getElementById('text1');
+const textRuta2 = document.getElementById('text2');
+const textRuta3 = document.getElementById('text3');
+const textRuta4 = document.getElementById('text4');
+const textRuta5 = document.getElementById('text5');
+
+function doljAllaTextRutor() {
+  console.log("funktionen körs!")
+  textRuta1.classList.add('osynlig');
+  textRuta2.classList.add('osynlig');
+  textRuta3.classList.add('osynlig');
+  textRuta4.classList.add('osynlig');
+  textRuta5.classList.add('osynlig');
+}
+
+article1.addEventListener('click', function() {
+  doljAllaTextRutor();
+  textRuta1.classList.remove('osynlig');
+});
+
+article2.addEventListener('click', function() {
+  doljAllaTextRutor();
+  textRuta2.classList.remove('osynlig');
+});
+
+article3.addEventListener('click', function() {
+  doljAllaTextRutor();
+  textRuta3.classList.remove('osynlig');
+});
+
+article4.addEventListener('click', function() {
+  doljAllaTextRutor();
+  textRuta4.classList.remove('osynlig');
+});
+
+article5.addEventListener('click', function() {
+  doljAllaTextRutor();
+  textRuta5.classList.remove('osynlig');
+});
+
+
