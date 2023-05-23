@@ -102,13 +102,13 @@ footer{
     grid-area: hs;
     padding: 15px;
     background: rgba(0, 0, 0, 0.7);
-    width: 180px;
+    width: 330px;
     border-radius: 15px;
     margin: 20px 0px 0px 10px;
 }
 
 #vanstersida{
-    display: flex;
+    display: none;
     flex-direction: column;
     grid-area: vs;
     padding: 15px;
@@ -143,6 +143,8 @@ footer{
     text-decoration: underline;
 }
 
+#small_footer{display: block;}
+
 #map {
     height: 300px; 
     width: 300px; 
@@ -173,7 +175,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     color: aliceblue;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #section_2{
@@ -207,14 +209,26 @@ footer{
     color: aliceblue;
 }
 
+#knapp_index{
+    background: grey;
+    width: 75px;
+    height: 25px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
 /* Popup container */
 .popup {
     display: inline-block;
     cursor: pointer;
-  }
+}
   
   /* The actual popup (appears on top) */
-  .popup .popuptext {
+.popup .popuptext {
     visibility: hidden;
     width: 170px;
     background-color: white;
@@ -224,30 +238,30 @@ footer{
     padding: 8px 0;
     bottom: 20px;
     left: 20px;
-  }
+}
   
   /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
+}
   
   /* Add animation (fade in the popup) */
   @-webkit-keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
-  }
+}
   
   @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
-  }
+}
 /* ---------------------------------------Kalender------------------------------------------- */
 
 #grid_wrapper_kalender{
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-columns: 200px minmax(200px, 1fr);
     grid-template-rows: 100px 100px 600px 800px 400px;
     grid-template-areas: 
     "he na"
@@ -304,6 +318,7 @@ footer{
     border: outset pink 7px;
     height: 130px;
     width: 100%;
+    cursor: pointer;
 }
 
 #article_k1{
@@ -341,8 +356,8 @@ footer{
 
 #grid_wrapper_vi_pa_pg{
     display: grid;
-    grid-template-rows: 100px 800px 400px;
-    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 100px 1200px 400px;
+    grid-template-columns: 200px minmax(200px, 1fr);
     grid-template-areas: 
     "he na"
     "bv bv"
@@ -363,13 +378,14 @@ footer{
 
 .person_kontainer{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "iv tv";
+    "iv"
+    "tv";
     background: lightpink;
-    height: 250px;
-    width: 550px;
+    height: 550px;
+    width: 300px;
     border: 5px aliceblue outset;
 }
 
@@ -389,6 +405,7 @@ footer{
 .text_vi_pa_pg{
     grid-area: tv;
     padding-top: 20px;
+    padding-left: 5px;
     color: aliceblue;
 
 }
@@ -419,7 +436,7 @@ footer{
 #grid_wrapper_basta_assistenten{
     display: grid;
     grid-template-rows: 100px 1300px 400px;
-    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-columns: 200px minmax(200px, 1fr);
     grid-template-areas: 
     "he na"
     "bb bb"
@@ -428,7 +445,7 @@ footer{
 
 #bakgrund_basta{
     display: grid;
-    grid-template-rows: 200px 500px 600px;
+    grid-template-rows: 200px 400px 800px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "sb"
@@ -456,11 +473,11 @@ footer{
     align-self: center;
     justify-self: center;
     color: aliceblue;
-    font-size: 45px;
+    font-size: 25px;
     padding-top: 5px;
     background: pink;
     border-radius: 10px;
-    width: 500px;
+    width: 300px;
     border: aliceblue 7px ridge;
 }
 
@@ -484,11 +501,13 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 400px;
+    height: 700px;
 }
 
 #tal{
     padding: 10px;
-    height: 490px;
+    height: 620px;
     width: 550px;
     background: pink;
     border: aliceblue 7px ridge;
@@ -521,7 +540,11 @@ footer{
     transform: translateY(0px);
     }
 
-    #hogersida{width: 330px;}
+    #vanstersida{
+        display: flex;
+    }
+
+    #small_footer{display: none;}
 
     /* -----------------------------------------------STARTSIDA--------------------------------- */
 
@@ -568,6 +591,14 @@ footer{
 }
 
 .person_kontainer{
+    grid-template-areas: 
+    "iv tv";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    height: 250px;
+}
+
+.person_kontainer{
     width: 800px;
 }
     
@@ -589,10 +620,24 @@ footer{
         "sb sb"
         "ig ab";
     }
+
+    #rubrik_basta{
+    font-size: 45px;
+    width: 500px;
+    }
+
+    #image_basta_kontainer{
+
+    }
     
     #bilden_pa_basta{
         height: 450px;
         width: auto;
+    }
+
+    #varfor_basta{
+        width: 600px;
+        height: 600px;
     }
 
     #tal{
