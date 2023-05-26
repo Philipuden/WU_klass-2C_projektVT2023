@@ -9,14 +9,15 @@ const textRuta2 = document.getElementById('text2');
 const textRuta3 = document.getElementById('text3');
 const textRuta4 = document.getElementById('text4');
 const textRuta5 = document.getElementById('text5');
+const textRuta6 = document.getElementById('text6');
 
 function doljAllaTextRutor() {
-  console.log("funktionen körs!");
   textRuta1.classList.add('osynlig');
   textRuta2.classList.add('osynlig');
   textRuta3.classList.add('osynlig');
   textRuta4.classList.add('osynlig');
   textRuta5.classList.add('osynlig');
+  textRuta6.classList.add('osynlig');
 }
 
 article1.addEventListener('click', function() {

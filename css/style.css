@@ -286,7 +286,7 @@ footer{
 
 #text-ruta{
     grid-area: tr;
-    background-color: blue;
+    background-color: lightskyblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -295,8 +295,22 @@ footer{
 #text-container{
     background-color: aliceblue;
     height: 400px;
-    width: 600px;
+    width: 380px;
     border-radius: 15px;
+    padding: 20px;
+
+}
+
+#text6{
+    color: grey;
+}
+
+.image_resa{
+    height: 150px;
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 10px;
+    outline: #000 2px solid;
 }
 
 .osynlig{
@@ -315,10 +329,16 @@ footer{
 }
 
 .frame{
-    border: outset pink 7px;
-    height: 130px;
+    border: outset lightskyblue 7px;
+    height: 100px;
     width: 100%;
     cursor: pointer;
+}
+
+.knapp_titel{
+    color: aliceblue;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding: 10px;
 }
 
 #article_k1{
@@ -564,7 +584,7 @@ footer{
 
     #grid_wrapper_kalender{
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 100px 700px 400px;
+    grid-template-rows: 100px 100px 600px 400px;
     grid-template-areas: 
     "na na"
     "kt kt"
@@ -572,9 +592,14 @@ footer{
     "fo fo";
     }   
 
-    #text-kontainer{
+    #text-container{
+        width: 600px;
+        height: 400px;
+    }
+
+    .image_resa{
+        height: 250px;
         width: 500px;
-        height: 600px;
     }
 
     
