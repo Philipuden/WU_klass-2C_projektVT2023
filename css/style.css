@@ -278,7 +278,7 @@ footer{
     align-items: center;
     grid-area: kt;
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 60px;
     color: aliceblue;
     background: pink;
     border: aliceblue 7px double;
@@ -495,7 +495,7 @@ footer{
     color: aliceblue;
     font-size: 25px;
     padding-top: 5px;
-    background: pink;
+    background: rgb(245, 158, 173);
     border-radius: 10px;
     width: 300px;
     border: aliceblue 7px ridge;
@@ -504,7 +504,7 @@ footer{
 #namn_rubrik{
     color: aliceblue;
     font-size: 40px;
-    background: pink;
+    background: rgb(245, 158, 173);
     border-radius: 5px;
     border: aliceblue 5px ridge;
 }
@@ -529,7 +529,7 @@ footer{
     padding: 10px;
     height: 620px;
     width: 550px;
-    background: pink;
+    background: rgb(245, 158, 173);
     border: aliceblue 7px ridge;
     color: aliceblue;
     border-radius: 10px;
@@ -590,7 +590,11 @@ footer{
     "kt kt"
     "di tr"
     "fo fo";
-    }   
+    } 
+    
+    #kalender_titel{
+        font-size: 80px;
+    }
 
     #text-container{
         width: 600px;
@@ -651,9 +655,7 @@ footer{
     width: 500px;
     }
 
-    #image_basta_kontainer{
 
-    }
     
     #bilden_pa_basta{
         height: 450px;
